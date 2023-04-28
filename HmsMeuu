@@ -1,0 +1,79 @@
+package healthManagementSystem;
+
+import java.util.Scanner;
+
+public class HmsMenu {
+    public static void main(String[] args) {
+        Scanner input = new Scanner(System.in);
+        Gender gender = new Gender();
+        Age age = new Age();
+        HeightMeasure height = new HeightMeasure();
+        WeightMeasure weight = new WeightMeasure();
+        BodyFat bodyfat = new BodyFat();
+        MuscleMeasure muscle = new MuscleMeasure();
+
+        while(true) {
+            System.out.println("[Health Management System]" + "\n"
+                    + "1.Gender" + "\n"
+                    + "2.Age" + "\n"
+                    + "3.Height" + "\n"
+                    + "4.Weight" + "\n"
+                    + "5.Bodyfat" + "\n"
+                    + "6.Muscle" + "\n"
+                    + "7:View" + "\n"
+                    + "8:Delete" + "\n"
+                    + "9.Exit" + "\n"
+            );
+
+            System.out.print("Input Menu>> ");
+            int num = input.nextInt();
+            switch (num) {
+                case 1:
+                    gender.setGender();
+                    System.out.println();
+                    break;
+                case 2:
+                    age.setAge();
+                    System.out.println();
+                    break;
+                case 3:
+                    height.setHeight();
+                    System.out.println();
+                    break;
+                case 4:
+                    weight.setWeight();
+                    System.out.println();
+                    break;
+                case 5:
+                    bodyfat.setBodyFat();
+                    System.out.println();
+                    break;
+                case 6:
+                    muscle.setMuscle();
+                    System.out.println();
+                    break;
+                case 7:
+                    System.out.println("Gender: " + gender.getGender());
+                    System.out.println("Age: " + age.getAge());
+                    System.out.println("Height: " + height.getHeight() + " cm");
+                    System.out.println("Weight: " + weight.getWeight() + "kg");
+                    System.out.println("Bodyfat: " + bodyfat.getBodyFat() + "%");
+                    System.out.println("Muscle: " + muscle.getMuscle() + "%");
+                    break;
+                case 8:
+                    gender.delete();
+                    age.delete();
+                    height.delete();
+                    weight.delete();
+                    bodyfat.delete();
+                    muscle.delete();
+                    break;
+                case 9:
+                    System.out.println("End");
+                    return;
+                default:
+                    System.out.println("Invalid input. Please try again.");
+            }
+        }
+    }
+}
