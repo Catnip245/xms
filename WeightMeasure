@@ -1,0 +1,21 @@
+package healthManagementSystem;
+
+import java.util.Scanner;
+
+public class WeightMeasure extends HmsMenu {
+	    private double weight;
+
+	    public void setWeight() {
+	        Scanner input = new Scanner(System.in);
+	        System.out.print("Input weight (in kg)>>");
+	        weight = input.nextDouble();
+	    }
+
+	    public double getWeight() {
+	        return weight;
+	    }
+	    
+	    public void delete() {
+	        weight = 0;
+	    }
+}
