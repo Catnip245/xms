@@ -1,0 +1,70 @@
+package healthManagementSystem;
+
+import java.util.Scanner;
+
+public class HmsMenu {
+    public static void main(String[] args) {
+        Scanner input = new Scanner(System.in);
+        AllData Data = new AllData();
+        Comparison comp = new Comparison();
+
+        while(true) {
+            System.out.println("[Health Management System]" + "\n"
+                    + "1.Gender" + "\n"
+                    + "2.Age" + "\n"
+                    + "3.Height" + "\n"
+                    + "4.Bodyfat" + "\n"
+                    + "5.Muscle" + "\n"
+                    + "6:View" + "\n"
+                    + "7:Compare" + "\n"
+                    + "8:Delete" + "\n"
+                    + "9.Exit" + "\n"
+            );
+
+            System.out.print("Input Menu>> ");
+            int num = input.nextInt();
+            switch (num) {
+                case 1:
+                    Data.setGender();
+                    System.out.println();
+                    break;
+                case 2:
+                    Data.setAge();
+                    System.out.println("20세 이상 59세 이하");
+                    System.out.println();
+                    break;
+                case 3:
+                    Data.setHeight();
+                    System.out.println();
+                    break;
+                case 4:
+                    Data.setBodyFat();
+                    System.out.println();
+                    break;
+                case 5:
+                    Data.setMuscle();
+                    System.out.println();
+                    break;
+                case 6:
+                    System.out.println("Gender: " + Data.getGender());
+                    System.out.println("Age: " + Data.getAge());
+                    System.out.println("Height: " + Data.getHeight() + " cm");
+                    System.out.println("Bodyfat: " + Data.getBodyFat() + "%");
+                    System.out.println("Muscle: " + Data.getMuscle() + "%");
+                    break;
+                case 7:
+                	comp.compareBodyFat();
+                	comp.compareHeight();
+                	comp.compareMuscle();
+                case 8:
+                    Data.delete();
+                    break;
+                case 9:
+                    System.out.println("프로그램 끝");
+                    return;
+                default:
+                    System.out.println("다른 숫자 입력");
+            }
+        }
+    }
+}
