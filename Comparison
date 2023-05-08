@@ -1,0 +1,233 @@
+package healthManagementSystem;
+
+public class Comparison extends AllData {
+    public void compareBodyFat() {
+        if (getGender() == 1) {
+            if (getAge() >= 20 && getAge() <= 29) {
+                if (getBodyFat() <= 16) {
+                    System.out.println("체지방률 평균 이하");
+                } 
+                else {
+                    System.out.println("체지방률 평균보다 높음");
+                }
+            }
+            else if (getAge() >= 30 && getAge() <= 39) {
+                if (getBodyFat() <= 18) {
+                    System.out.println("체지방률 평균 이하");
+                }
+                else {
+                    System.out.println("체지방률 평균보다 높음");
+                }
+            }
+            else if (getAge() >= 40 && getAge() <= 49) {
+                if (getBodyFat() <= 20) {
+                    System.out.println("체지방률 평균 이하");
+                } 
+                else {
+                    System.out.println("체지방률 평균보다 높음");
+                }
+            } 
+            else if (getAge() >= 50 && getAge() <= 59) {
+                if (getBodyFat() <= 22) {
+                    System.out.println("체지방률 평균 이하");
+                } 
+                else {
+                    System.out.println("체지방률 평균보다 높음");
+                }
+            } 
+            else {
+                System.out.println("입력한 나잇대 정보가 없음");
+            }
+        } 
+        else if (getGender() == 2) {
+            if (getAge() >= 20 && getAge() <= 29) {
+                if (getBodyFat() <= 22) {
+                    System.out.println("체지방률 평균 이하");
+                }
+                else {
+                	System.out.println("체지방률 평균보다 높음");
+                }
+            }
+            else if (getAge() >= 30 && getAge() <= 39) {
+            	if (getBodyFat() <= 24){
+                    System.out.println("체지방률 평균 이하");
+                }
+            	else {
+            		System.out.println("체지방률 평균보다 높음");
+            	}
+            }
+            else if (getAge() >= 40 && getAge() <= 49) {
+            	if (getBodyFat() <= 26) {
+            		System.out.println("체지방률 평균 이하");
+            	}
+            	else {
+            		System.out.println("체지방률 평균보다 높음");
+            	}
+            }
+            else if (getAge() >= 50 && getAge() <= 59) {
+            	if (getBodyFat() <= 28) {
+            		System.out.println("체지방률 평균 이하");
+            	}
+            	else {
+            		System.out.println("체지방률 평균보다 높음");
+            	}
+            }
+            else {
+                System.out.println("입력한 나잇대 정보가 없음");
+            }
+        }
+    }
+    public void compareHeight() {
+    	if(getGender() == 1) {
+    		if (getAge() >= 20 && getAge() <= 29) {
+    			if (getHeight() >= 174.4) {
+    				System.out.println("키 평균 이상");
+    			}
+    			else {
+    				System.out.println("키 평균보다 작음");
+    			}
+    		}
+    		else if (getAge() >= 30 && getAge() <= 39) {
+    			if (getHeight() >= 174.9) {
+    				System.out.println("키 평균 이상");
+    			}
+    			else {
+    				System.out.println("키 평균보다 작음");
+    			}
+    		}
+    		else if (getAge() >= 40 && getAge() <= 49) {
+    			if (getHeight() >= 173.2) {
+    				System.out.println("키 평균 이상");
+    			}
+    			else {
+    				System.out.println("키 평균보다 작음");
+    			}
+    		}
+    		else if (getAge() >= 50 && getAge() <= 59) {
+    			if (getHeight() >= 170.5) {
+    				System.out.println("키 평균 이상");
+    			}
+    			else {
+    				System.out.println("키 평균보다 작음");
+    			}
+    		}
+    		else {
+                System.out.println("입력한 나잇대 정보가 없음");
+            }
+    	}
+    	else if (getGender() == 2) {
+    		if (getAge() >= 20 && getAge() <= 29) {
+    			if (getHeight() >= 161.3) {
+    				System.out.println("키 평균 이상");
+    			}
+    			else {
+    				System.out.println("키 평균보다 작음");
+    			}
+    		}
+    		else if (getAge() >= 30 && getAge() <= 39) {
+    			if (getHeight() >= 161.9) {
+    				System.out.println("키 평균 이상");
+    			}
+    			else {
+    				System.out.println("키 평균보다 작음");
+    			}
+    		}
+    		else if (getAge() >= 40 && getAge() <= 49) {
+    			if (getHeight() >= 160.5) {
+    				System.out.println("키 평균 이상");
+    			}
+    			else {
+    				System.out.println("키 평균보다 작음");
+    			}
+    		}
+    		else if (getAge() >= 50 && getAge() <= 59) {
+    			if (getHeight() >= 157.6) {
+    				System.out.println("키 평균 이상");
+    			}
+    			else {
+    				System.out.println("키 평균보다 작음");
+    			}
+    		}
+    		else {
+                System.out.println("입력한 나잇대 정보가 없음");
+            }
+    	}
+    }
+    public void compareMuscle() {
+    	if (getGender() == 1) {
+    		if (getAge() >= 20 && getAge() <= 29) {
+    			if (getMuscle() >= 43) {
+    				System.out.println("근육량 평균 이상");
+    			}
+    			else {
+    				System.out.println("근육량 평균보다 낮음");
+    			}
+    		}
+    		else if (getAge() >= 30 && getAge() <= 39) {
+    			if (getMuscle() >= 40) {
+    				System.out.println("근육량 평균 이상");
+    			}
+    			else {
+    				System.out.println("근육량 평균보다 낮음");
+    			}
+    		}
+    		else if (getAge() >= 40 && getAge() <= 49) {
+    			if (getMuscle() >= 37) {
+    				System.out.println("근육량 평균 이상");
+    			}
+    			else {
+    				System.out.println("근육량 평균보다 낮음");
+    			}
+    		}
+    		else if (getAge() >= 50 && getAge() <= 59) {
+    			if (getMuscle() >= 34) {
+    				System.out.println("근육량 평균 이상");
+    			}
+    			else {
+    				System.out.println("근육량 평균보다 낮음");
+    			}
+    		}
+    		else {
+                System.out.println("입력한 나잇대 정보가 없음");
+            }
+    	}
+    	else if (getGender() == 2) {
+    		if (getAge() >= 20 && getAge() <= 29) {
+    			if (getMuscle() >= 34) {
+    				System.out.println("근육량 평균 이상");
+    			}
+    			else {
+    				System.out.println("근육량 평균보다 낮음");
+    			}
+    		}
+    		else if (getAge() >= 30 && getAge() <= 39) {
+    			if (getMuscle() >= 32) {
+    				System.out.println("근육량 평균 이상");
+    			}
+    			else {
+    				System.out.println("근육량 평균보다 낮음");
+    			}
+    		}
+    		else if (getAge() >= 40 && getAge() <= 49) {
+    			if (getMuscle() >= 30) {
+    				System.out.println("근육량 평균 이상");
+    			}
+    			else {
+    				System.out.println("근육량 평균보다 낮음");
+    			}
+    		}
+    		else if (getAge() >= 50 && getAge() <= 59) {
+    			if (getMuscle() >= 28) {
+    				System.out.println("근육량 평균 이상");
+    			}
+    			else {
+    				System.out.println("근육량 평균보다 낮음");
+    			}
+    		}
+    		else {
+                System.out.println("입력한 나잇대 정보가 없음");
+            }
+    	}
+    }
+}
+         
