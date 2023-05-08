@@ -1,0 +1,69 @@
+package healthManagementSystem;
+
+import java.util.Scanner;
+
+public class AllData {
+    private int gender;
+    private int age;
+    private double bodyFat;
+    private double height;
+    private double muscle;
+
+    public void setGender() {
+        Scanner input = new Scanner(System.in);
+        System.out.print("Input gender (1 for male, 2 for female)>> ");
+        gender = input.nextInt();
+    }
+
+    public int getGender() {
+        return gender;
+    }
+
+    public void setAge() {
+        Scanner input = new Scanner(System.in);
+        System.out.print("Input Age>>");
+        age = input.nextInt();
+    }
+
+    public int getAge() {
+        return age;
+    }
+
+    public void setBodyFat() {
+        Scanner input = new Scanner(System.in);
+        System.out.print("Input Body_fat (in %)>>");
+        bodyFat = input.nextDouble();
+    }
+
+    public double getBodyFat() {
+        return bodyFat;
+    }
+
+    public void setHeight() {
+        Scanner input = new Scanner(System.in);
+        System.out.print("Input Height (in cm)>>");
+        height = input.nextDouble();
+    }
+
+    public double getHeight() {
+        return height;
+    }
+
+    public void setMuscle() {
+        Scanner input = new Scanner(System.in);
+        System.out.print("Input Muscle (in %)>>");
+        muscle = input.nextDouble();
+    }
+
+    public double getMuscle() {
+        return muscle;
+    }
+    
+    public void delete() {
+    	gender =0;
+    	age = 0;
+    	bodyFat = 0.0;
+    	height = 0.0;
+    	muscle = 0.0;
+    }
+}
