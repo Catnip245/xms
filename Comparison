@@ -78,81 +78,65 @@ public class Comparison extends AllData {
         }
     }
     public void compareHeight() {
-    	if(getGender() == 1) {
-    		if (getAge() >= 20 && getAge() <= 29) {
-    			if (getHeight() >= 174.4) {
-    				System.out.println("키 평균 이상");
-    			}
-    			else {
-    				System.out.println("키 평균보다 작음");
-    			}
-    		}
-    		else if (getAge() >= 30 && getAge() <= 39) {
-    			if (getHeight() >= 174.9) {
-    				System.out.println("키 평균 이상");
-    			}
-    			else {
-    				System.out.println("키 평균보다 작음");
-    			}
-    		}
-    		else if (getAge() >= 40 && getAge() <= 49) {
-    			if (getHeight() >= 173.2) {
-    				System.out.println("키 평균 이상");
-    			}
-    			else {
-    				System.out.println("키 평균보다 작음");
-    			}
-    		}
-    		else if (getAge() >= 50 && getAge() <= 59) {
-    			if (getHeight() >= 170.5) {
-    				System.out.println("키 평균 이상");
-    			}
-    			else {
-    				System.out.println("키 평균보다 작음");
-    			}
-    		}
-    		else {
+        if (getGender() == 1) {
+            if (getAge() >= 20 && getAge() <= 29) {
+                if (getHeight() >= 174.4) {
+                    System.out.println("키 평균 이상");
+                } else {
+                    System.out.println("키 평균보다 작음");
+                }
+            } else if (getAge() >= 30 && getAge() <= 39) {
+                if (getHeight() >= 173.6) {
+                    System.out.println("키 평균 이상");
+                } else {
+                    System.out.println("키 평균보다 작음");
+                }
+            } else if (getAge() >= 40 && getAge() <= 49) {
+                if (getHeight() >= 172.4) {
+                    System.out.println("키 평균 이상");
+                } else {
+                    System.out.println("키 평균보다 작음");
+                }
+            } else if (getAge() >= 50 && getAge() <= 59) {
+                if (getHeight() >= 170.6) {
+                    System.out.println("키 평균 이상");
+                } else {
+                    System.out.println("키 평균보다 작음");
+                }
+            } else {
                 System.out.println("입력한 나잇대 정보가 없음");
             }
-    	}
-    	else if (getGender() == 2) {
-    		if (getAge() >= 20 && getAge() <= 29) {
-    			if (getHeight() >= 161.3) {
-    				System.out.println("키 평균 이상");
-    			}
-    			else {
-    				System.out.println("키 평균보다 작음");
-    			}
-    		}
-    		else if (getAge() >= 30 && getAge() <= 39) {
-    			if (getHeight() >= 161.9) {
-    				System.out.println("키 평균 이상");
-    			}
-    			else {
-    				System.out.println("키 평균보다 작음");
-    			}
-    		}
-    		else if (getAge() >= 40 && getAge() <= 49) {
-    			if (getHeight() >= 160.5) {
-    				System.out.println("키 평균 이상");
-    			}
-    			else {
-    				System.out.println("키 평균보다 작음");
-    			}
-    		}
-    		else if (getAge() >= 50 && getAge() <= 59) {
-    			if (getHeight() >= 157.6) {
-    				System.out.println("키 평균 이상");
-    			}
-    			else {
-    				System.out.println("키 평균보다 작음");
-    			}
-    		}
-    		else {
+        } else if (getGender() == 2) {
+            if (getAge() >= 20 && getAge() <= 29) {
+                if (getHeight() >= 162.1) {
+                    System.out.println("키 평균 이상");
+                } else {
+                    System.out.println("키 평균보다 작음");
+                }
+            } else if (getAge() >= 30 && getAge() <= 39) {
+                if (getHeight() >= 161.3) {
+                    System.out.println("키 평균 이상");
+                } else {
+                    System.out.println("키 평균보다 작음");
+                }
+            } else if (getAge() >= 40 && getAge() <= 49) {
+                if (getHeight() >= 159.8) {
+                    System.out.println("키 평균 이상");
+                } else {
+                    System.out.println("키 평균보다 작음");
+                }
+            } else if (getAge() >= 50 && getAge() <= 59) {
+                if (getHeight() >= 157.9) {
+                    System.out.println("키 평균 이상");
+                } else {
+                    System.out.println("키 평균보다 작음");
+                }
+            } else {
                 System.out.println("입력한 나잇대 정보가 없음");
             }
-    	}
+        }
     }
+
     public void compareMuscle() {
     	if (getGender() == 1) {
     		if (getAge() >= 20 && getAge() <= 29) {
@@ -230,4 +214,5 @@ public class Comparison extends AllData {
     	}
     }
 }
+               
          
