@@ -2,7 +2,7 @@ package healthManagementSystem;
 
 import java.util.Scanner;
 
-public class AllData {
+public abstract class AllData {
     private int gender;
     private int age;
     private double bodyFat;
