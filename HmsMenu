@@ -5,7 +5,7 @@ import java.util.Scanner;
 public class HmsMenu {
     public static void main(String[] args) {
         Scanner input = new Scanner(System.in);
-        AllData Data = new AllData();
+       
         Comparison comp = new Comparison();
 
         while(true) {
@@ -25,39 +25,39 @@ public class HmsMenu {
             int num = input.nextInt();
             switch (num) {
                 case 1:
-                    Data.setGender();
+                    comp.setGender();
                     System.out.println();
                     break;
                 case 2:
-                    Data.setAge();
+                    comp.setAge();
                     System.out.println("20세 이상 59세 이하");
                     System.out.println();
                     break;
                 case 3:
-                    Data.setHeight();
+                    comp.setHeight();
                     System.out.println();
                     break;
                 case 4:
-                    Data.setBodyFat();
+                    comp.setBodyFat();
                     System.out.println();
                     break;
                 case 5:
-                    Data.setMuscle();
+                    comp.setMuscle();
                     System.out.println();
                     break;
                 case 6:
-                    System.out.println("Gender: " + Data.getGender());
-                    System.out.println("Age: " + Data.getAge());
-                    System.out.println("Height: " + Data.getHeight() + " cm");
-                    System.out.println("Bodyfat: " + Data.getBodyFat() + "%");
-                    System.out.println("Muscle: " + Data.getMuscle() + "%");
+                    System.out.println("Gender: " + comp.getGender());
+                    System.out.println("Age: " + comp.getAge());
+                    System.out.println("Height: " + comp.getHeight() + " cm");
+                    System.out.println("Bodyfat: " + comp.getBodyFat() + "%");
+                    System.out.println("Muscle: " + comp.getMuscle() + "%");
                     break;
                 case 7:
                 	comp.compareBodyFat();
                 	comp.compareHeight();
                 	comp.compareMuscle();
                 case 8:
-                    Data.delete();
+                    comp.delete();
                     break;
                 case 9:
                     System.out.println("프로그램 끝");
