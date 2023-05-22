@@ -1,0 +1,5 @@
+package healthManagementSystem;
+
+public interface ShareComm {
+	
+}
