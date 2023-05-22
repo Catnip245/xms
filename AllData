@@ -1,5 +1,6 @@
 package healthManagementSystem;
 
+import java.util.InputMismatchException;
 import java.util.Scanner;
 
 public abstract class AllData {
@@ -12,7 +13,20 @@ public abstract class AllData {
     public void setGender() {
         Scanner input = new Scanner(System.in);
         System.out.print("Input gender (1 for male, 2 for female)>> ");
-        gender = input.nextInt();
+        while(true) {
+        	try {
+        		gender = input.nextInt();
+        		if(gender == 1 || gender == 2) {
+        			break;
+        		}
+        		else {
+        			System.out.println("잘못된 입력값(1이나 2를 입력)");
+        		}
+        	} catch(InputMismatchException e) {
+        		System.out.println("잘못된 입력값(1이나 2를 입력)");
+        		input.nextLine();
+        	}
+        }
     }
 
     public int getGender() {
@@ -22,7 +36,20 @@ public abstract class AllData {
     public void setAge() {
         Scanner input = new Scanner(System.in);
         System.out.print("Input Age>>");
-        age = input.nextInt();
+        while(true) {
+        	try {
+        		age = input.nextInt();
+        		if(age>=20 && age<=60) {
+        			break;
+        		}
+        		else {
+        			System.out.println("잘못된 입력값(20~60 사잇값을 입력)");
+        		}
+        	} catch(InputMismatchException e) {
+        		System.out.println("잘못된 입력값(20~60 사잇값을 입력)");
+        		input.nextLine();
+        	}
+        }
     }
 
     public int getAge() {
@@ -32,7 +59,7 @@ public abstract class AllData {
     public void setBodyFat() {
         Scanner input = new Scanner(System.in);
         System.out.print("Input Body_fat (in %)>>");
-        bodyFat = input.nextDouble();
+    		bodyFat = input.nextInt();
     }
 
     public double getBodyFat() {
