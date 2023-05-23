@@ -1,9 +1,10 @@
 package healthManagementSystem;
 
+import java.io.Serializable;
 import java.util.InputMismatchException;
 import java.util.Scanner;
 
-public abstract class AllData {
+public abstract class AllData implements Serializable {
     private int gender;
     private int age;
     private double bodyFat;
@@ -27,6 +28,7 @@ public abstract class AllData {
         		input.nextLine();
         	}
         }
+        Log.log("성별: " + gender);
     }
 
     public int getGender() {
@@ -92,5 +94,6 @@ public abstract class AllData {
     	bodyFat = 0.0;
     	height = 0.0;
     	muscle = 0.0;
+    	Log.log("값 삭제됨");
     }
 }
