@@ -1,0 +1,52 @@
+package healthManagementSystem;
+
+import java.io.*;
+import java.util.ArrayList;
+import java.util.List;
+
+public class Log {
+	public static void log(String a){
+		try {
+			BufferedWriter w = new BufferedWriter(new FileWriter("log.txt", true));
+			w.write(a);
+			w.newLine();
+			w.close();
+		}catch(IOException e) {
+			System.out.println("write 오류: " + e.getMessage());
+		}
+	}
+	public static void saveInfo(AllData data) {
+		try {
+			  ObjectOutputStream o = new ObjectOutputStream(new FileOutputStream("data.ser"));
+	          o.writeObject(data);
+	          o.close();
+		}catch(IOException e){
+			System.out.println("저장 오류: " + e.getMessage());
+        }
+	}
+	public static AllData loadInfo() {
+		try {
+			ObjectInputStream i = new ObjectInputStream(new FileInputStream("data.ser"));
+            AllData data = (AllData) i.readObject();
+            i.close();
+            return data;
+		}catch(IOException | ClassNotFoundException e) {
+			System.out.println("로딩 오류: " + e.getMessage());
+		}
+		return null;
+	}
+	public static List<String> All() {
+        List<String> s = new ArrayList<>();
+        try {
+            BufferedReader reader = new BufferedReader(new FileReader("test.txt"));
+            String line;
+            while ((line = reader.readLine()) != null) {
+                s.add(line);
+            }
+            reader.close();
+        } catch (IOException e) {
+            System.out.println("read 오류: " + e.getMessage());
+        }
+        return s;
+	}
+}
