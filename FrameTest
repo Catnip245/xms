@@ -1,0 +1,17 @@
+package healthManagementSystem;
+import javax.swing.*;
+
+public class FrameTest {
+    public static void main(String[] args) {
+        JFrame frame = new JFrame("Simple GUI");
+        frame.setSize(300, 200);
+        frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+
+        JLabel label = new JLabel("Health Management System");
+        label.setHorizontalAlignment(JLabel.CENTER);
+
+        frame.getContentPane().add(label);
+
+        frame.setVisible(true);
+    }
+}
