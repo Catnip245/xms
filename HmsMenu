@@ -17,8 +17,9 @@ public class HmsMenu {
                     + "5.Muscle" + "\n"
                     + "6:View" + "\n"
                     + "7:Compare" + "\n"
-                    + "8:Delete" + "\n"
-                    + "9.Exit" + "\n"
+                    + "8:load Info" + "\n"
+                    + "9:Delete" + "\n"
+                    + "10.Exit" + "\n"
             );
 
             System.out.print("Input Menu>> ");
@@ -57,9 +58,11 @@ public class HmsMenu {
                 	comp.compareHeight();
                 	comp.compareMuscle();
                 case 8:
+                	Log.loadInfo();
+                case 9:
                     comp.delete();
                     break;
-                case 9:
+                case 10:
                     System.out.println("프로그램 끝");
                     return;
                 default:
