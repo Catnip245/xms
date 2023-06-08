@@ -5,6 +5,7 @@ import java.util.Scanner;
 public class HmsMenu {
     public static void main(String[] args) {
         Scanner input = new Scanner(System.in);
+        HmsFrame testF = new HmsFrame();
        
         Comparison comp = new Comparison();
 
